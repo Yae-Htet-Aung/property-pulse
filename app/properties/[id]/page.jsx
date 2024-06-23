@@ -1,24 +1,12 @@
 "use client";
 
-import {
-  useParams,
-  usePathname,
-  useRouter,
-  useSearchParams,
-} from "next/navigation";
+import { useRouter } from "next/navigation";
 
 const PropertyPage = () => {
   const router = useRouter();
-  const { id } = useParams();
-  const pathName = usePathname();
-  const searchParams = useSearchParams();
-  const name = searchParams.get("who");
-
-  console.log("Hello, id is", id);
-  console.log("Name is", name);
-  console.log("Path name is", pathName);
   return (
     <div>
+      <h1 className="text-3xl">Detail Page</h1>
       <button
         onClick={() => router.push("/")}
         className="bg-blue-500 p-3 rounded-md"
